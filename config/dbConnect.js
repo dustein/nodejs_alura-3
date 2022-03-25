@@ -1,7 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.MONGO_URI)
+const URL = process.env.MONGO_URI;
+mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true})
 
 let db = mongoose.connection;
 
-export default db;
+export default db
