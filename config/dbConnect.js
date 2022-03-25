@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 // mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true})
 
 //config uso MongoDB local
-mongoose.connect('mongodb://localhost/livraria')
+mongoose.connect('mongodb://localhost/livraria');
 //config uso MongoDB Atlas - s nha p oviso ia pa a t st s
 // mongoose.connect("mongodb+srv://dustein:data02@cluster0.5iskh.mongodb.net/livraria")
 
