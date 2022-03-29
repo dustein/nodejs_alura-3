@@ -1,5 +1,6 @@
 import express from 'express';
 import db from './config/dbConnect.js';
+;;retomando no work
 
 db.on("error", console.log.bind(console, 'Erro de Conexão no BD !'));
 
