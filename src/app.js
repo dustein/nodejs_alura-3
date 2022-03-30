@@ -23,21 +23,16 @@ function buscaLivro(id) {
 }
 
 
-app.get("/livros/:id", (req, res) => {
-    const indice = buscaLivro(req.params.id);
-    res.status(200).json(livros[indice])
-})
+// app.get("/livros/:id", (req, res) => {
+//     const indice = buscaLivro(req.params.id);
+//     res.status(200).json(livros[indice])
+// })
 
-// app.post("/livros", (req, res) => {
-//     livros.push(req.body);
-//     res.status(201).json({status: "Livro cadastrado OK"});
+// app.put("/livros/:id", (req, res) => {
+//     const indice = buscaLivro(req.params.id);
+//     livros[indice].titulo = req.body.titulo
+//     res.status(200).json(livros);
 // });
-
-app.put("/livros/:id", (req, res) => {
-    const indice = buscaLivro(req.params.id);
-    livros[indice].titulo = req.body.titulo
-    res.status(200).json(livros);
-});
 
 
 export default app;
