@@ -14,7 +14,7 @@ class LivroController {
         livros.findById(id, (err, livros) => {
             if(err) {
                 res.status(400).send({message: `Nao ha livro id ${id}`})
-            }
+            } res.status(200).send(livros);
         })
     }
 
@@ -40,6 +40,17 @@ class LivroController {
             } else {
                 res.status(500).send({message: `${err.message} - Ocorreu erro !`})
             }
+        })
+    };
+
+    static excluirLivro = (req, res) => {
+        const { id } = req.params;
+        livros.findByIdAndDelete(id, (err) => {
+            if(!err) {
+                res.status(200).send({message: "Livro Excluido com Sucesso!!"})
+            } else {
+                res.status(500).send({message: err.message})
+            };
         })
     }
 };
