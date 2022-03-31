@@ -27,7 +27,7 @@ class AutorController {
                     .status(500)
                     .send({message: `${err.message} - falha ao cadastrar Autor.`})
             } else {
-                res.status(201).send(Autor.toJSON())
+                res.status(201).send(autor.toJSON())
             }
         })
     };
